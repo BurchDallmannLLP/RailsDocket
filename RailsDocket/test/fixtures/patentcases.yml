@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  case_id: 1
+  apptype: MyString
+  appfiled: false
+  date: 2012-01-16 20:44:27
+  status: MyString
+  examiner: MyString
+  appno: MyString
+  pubappno: MyString
+  confno: MyString
+  artunit: MyString
+  fileddate: 2012-01-16 20:44:27
+  pct: false
+  pph: false
+  special: false
+
+two:
+  case_id: 1
+  apptype: MyString
+  appfiled: false
+  date: 2012-01-16 20:44:27
+  status: MyString
+  examiner: MyString
+  appno: MyString
+  pubappno: MyString
+  confno: MyString
+  artunit: MyString
+  fileddate: 2012-01-16 20:44:27
+  pct: false
+  pph: false
+  special: false

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Docketno:</b>
+  <%= @case.docketno %>
+</p>
+
+<p>
+  <b>Casetype:</b>
+  <%= @case.casetype %>
+</p>
+
+
+<%= link_to 'Edit', edit_case_path(@case) %> |
+<%= link_to 'Back', cases_path %>

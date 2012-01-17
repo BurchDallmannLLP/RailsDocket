@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  case_id: 1
+  eventtype: MyString
+  date: 2012-01-16 20:40:53
+  complete: false
+
+two:
+  case_id: 1
+  eventtype: MyString
+  date: 2012-01-16 20:40:53
+  complete: false

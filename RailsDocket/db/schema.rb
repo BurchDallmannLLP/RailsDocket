@@ -10,7 +10,83 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120117012002) do
+ActiveRecord::Schema.define(:version => 20120117014427) do
+
+  create_table "billings", :force => true do |t|
+    t.integer  "case_id"
+    t.datetime "date"
+    t.float    "hours"
+    t.string   "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "caseevents", :force => true do |t|
+    t.integer  "case_id"
+    t.string   "eventtype"
+    t.datetime "date"
+    t.boolean  "complete"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cases", :force => true do |t|
+    t.string   "docketno"
+    t.string   "casetype"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "clientcases", :force => true do |t|
+    t.integer  "case_id"
+    t.integer  "client_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "clients", :force => true do |t|
+    t.string   "fname"
+    t.string   "lname"
+    t.string   "addy1"
+    t.string   "addy2"
+    t.string   "city"
+    t.string   "zip"
+    t.string   "state"
+    t.string   "country"
+    t.string   "phone"
+    t.string   "email"
+    t.boolean  "engagltr"
+    t.datetime "engagdate"
+    t.boolean  "probono"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "firms", :force => true do |t|
+    t.string   "metatype"
+    t.string   "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "patentcases", :force => true do |t|
+    t.integer  "case_id"
+    t.string   "apptype"
+    t.boolean  "appfiled"
+    t.datetime "date"
+    t.string   "status"
+    t.string   "examiner"
+    t.string   "appno"
+    t.string   "pubappno"
+    t.string   "confno"
+    t.string   "artunit"
+    t.datetime "fileddate"
+    t.boolean  "pct"
+    t.boolean  "pph"
+    t.boolean  "special"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false

@@ -6,7 +6,7 @@ Resources/Data Schema:
 
 Resources ---
 
-Client: fname, lname, addy1, addy2, city, zip, state, country, phone, email, engagltr, probono
+Client: fname, lname, addy1, addy2, city, zip, state, country, phone, email, engagltr, engagedate, probono
 
 Case: docketno, casetype
 
@@ -17,9 +17,9 @@ Firm: metatype, data
 
 Billing: (FK belongs_to Case), date, hours, note
 
-ClientCase: FK belongs_to Case, FK belongs_to Client
+ClientCase: FK belongs_to case_id (integer), FK belongs_to client_id (integer)
 
-PatentCase: FK belongs_to Case, apptype, appfiled, date, status, examiner, appno, pubappno, confno, artunit, filedate, pct, pph, special
+PatentCase: FK belongs_to case_id(integer), apptype, appfiled, date, status, examiner, appno, pubappno, confno, artunit, filedate, pct, pph, special
 
 --- Devise is used for User management
 

@@ -1,4 +1,18 @@
 RailsDocket::Application.routes.draw do
+  resources :patentcases
+
+  resources :clientcases
+
+  resources :billings
+
+  resources :firms
+
+  resources :caseevents
+
+  resources :cases
+
+  resources :clients
+
   devise_for :users
 
   get "home/index"

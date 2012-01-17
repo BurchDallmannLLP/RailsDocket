@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Fname:</b>
+  <%= @client.fname %>
+</p>
+
+<p>
+  <b>Lname:</b>
+  <%= @client.lname %>
+</p>
+
+<p>
+  <b>Addy1:</b>
+  <%= @client.addy1 %>
+</p>
+
+<p>
+  <b>Addy2:</b>
+  <%= @client.addy2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @client.city %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @client.zip %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @client.state %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @client.country %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @client.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @client.email %>
+</p>
+
+<p>
+  <b>Engagltr:</b>
+  <%= @client.engagltr %>
+</p>
+
+<p>
+  <b>Engagdate:</b>
+  <%= @client.engagdate %>
+</p>
+
+<p>
+  <b>Probono:</b>
+  <%= @client.probono %>
+</p>
+
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

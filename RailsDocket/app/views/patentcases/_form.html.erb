@@ -1,0 +1,73 @@
+<%= form_for(@patentcase) do |f| %>
+  <% if @patentcase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patentcase.errors.count, "error") %> prohibited this patentcase from being saved:</h2>
+
+      <ul>
+      <% @patentcase.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :case_id %><br />
+    <%= f.number_field :case_id %>
+  </div>
+  <div class="field">
+    <%= f.label :apptype %><br />
+    <%= f.text_field :apptype %>
+  </div>
+  <div class="field">
+    <%= f.label :appfiled %><br />
+    <%= f.check_box :appfiled %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :examiner %><br />
+    <%= f.text_field :examiner %>
+  </div>
+  <div class="field">
+    <%= f.label :appno %><br />
+    <%= f.text_field :appno %>
+  </div>
+  <div class="field">
+    <%= f.label :pubappno %><br />
+    <%= f.text_field :pubappno %>
+  </div>
+  <div class="field">
+    <%= f.label :confno %><br />
+    <%= f.text_field :confno %>
+  </div>
+  <div class="field">
+    <%= f.label :artunit %><br />
+    <%= f.text_field :artunit %>
+  </div>
+  <div class="field">
+    <%= f.label :fileddate %><br />
+    <%= f.datetime_select :fileddate %>
+  </div>
+  <div class="field">
+    <%= f.label :pct %><br />
+    <%= f.check_box :pct %>
+  </div>
+  <div class="field">
+    <%= f.label :pph %><br />
+    <%= f.check_box :pph %>
+  </div>
+  <div class="field">
+    <%= f.label :special %><br />
+    <%= f.check_box :special %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

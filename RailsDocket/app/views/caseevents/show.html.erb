@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Case:</b>
+  <%= @caseevent.case_id %>
+</p>
+
+<p>
+  <b>Eventtype:</b>
+  <%= @caseevent.eventtype %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @caseevent.date %>
+</p>
+
+<p>
+  <b>Complete:</b>
+  <%= @caseevent.complete %>
+</p>
+
+
+<%= link_to 'Edit', edit_caseevent_path(@caseevent) %> |
+<%= link_to 'Back', caseevents_path %>

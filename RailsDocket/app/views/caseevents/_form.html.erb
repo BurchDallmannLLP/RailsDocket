@@ -1,0 +1,33 @@
+<%= form_for(@caseevent) do |f| %>
+  <% if @caseevent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@caseevent.errors.count, "error") %> prohibited this caseevent from being saved:</h2>
+
+      <ul>
+      <% @caseevent.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :case_id %><br />
+    <%= f.number_field :case_id %>
+  </div>
+  <div class="field">
+    <%= f.label :eventtype %><br />
+    <%= f.text_field :eventtype %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :complete %><br />
+    <%= f.check_box :complete %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

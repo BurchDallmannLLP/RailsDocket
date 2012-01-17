@@ -1,0 +1,29 @@
+<h1>Listing caseevents</h1>
+
+<table>
+  <tr>
+    <th>Case</th>
+    <th>Eventtype</th>
+    <th>Date</th>
+    <th>Complete</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @caseevents.each do |caseevent| %>
+  <tr>
+    <td><%= caseevent.case_id %></td>
+    <td><%= caseevent.eventtype %></td>
+    <td><%= caseevent.date %></td>
+    <td><%= caseevent.complete %></td>
+    <td><%= link_to 'Show', caseevent %></td>
+    <td><%= link_to 'Edit', edit_caseevent_path(caseevent) %></td>
+    <td><%= link_to 'Destroy', caseevent, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Caseevent', new_caseevent_path %>

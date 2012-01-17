@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  case_id: 1
+  date: 2012-01-16 20:42:23
+  hours: 1.5
+  note: MyString
+
+two:
+  case_id: 1
+  date: 2012-01-16 20:42:23
+  hours: 1.5
+  note: MyString

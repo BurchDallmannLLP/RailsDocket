@@ -1,0 +1,49 @@
+<h1>Listing patentcases</h1>
+
+<table>
+  <tr>
+    <th>Case</th>
+    <th>Apptype</th>
+    <th>Appfiled</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>Examiner</th>
+    <th>Appno</th>
+    <th>Pubappno</th>
+    <th>Confno</th>
+    <th>Artunit</th>
+    <th>Fileddate</th>
+    <th>Pct</th>
+    <th>Pph</th>
+    <th>Special</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @patentcases.each do |patentcase| %>
+  <tr>
+    <td><%= patentcase.case_id %></td>
+    <td><%= patentcase.apptype %></td>
+    <td><%= patentcase.appfiled %></td>
+    <td><%= patentcase.date %></td>
+    <td><%= patentcase.status %></td>
+    <td><%= patentcase.examiner %></td>
+    <td><%= patentcase.appno %></td>
+    <td><%= patentcase.pubappno %></td>
+    <td><%= patentcase.confno %></td>
+    <td><%= patentcase.artunit %></td>
+    <td><%= patentcase.fileddate %></td>
+    <td><%= patentcase.pct %></td>
+    <td><%= patentcase.pph %></td>
+    <td><%= patentcase.special %></td>
+    <td><%= link_to 'Show', patentcase %></td>
+    <td><%= link_to 'Edit', edit_patentcase_path(patentcase) %></td>
+    <td><%= link_to 'Destroy', patentcase, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Patentcase', new_patentcase_path %>

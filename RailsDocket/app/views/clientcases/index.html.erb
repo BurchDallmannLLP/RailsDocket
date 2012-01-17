@@ -1,0 +1,25 @@
+<h1>Listing clientcases</h1>
+
+<table>
+  <tr>
+    <th>Case</th>
+    <th>Client</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clientcases.each do |clientcase| %>
+  <tr>
+    <td><%= clientcase.case_id %></td>
+    <td><%= clientcase.client_id %></td>
+    <td><%= link_to 'Show', clientcase %></td>
+    <td><%= link_to 'Edit', edit_clientcase_path(clientcase) %></td>
+    <td><%= link_to 'Destroy', clientcase, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Clientcase', new_clientcase_path %>

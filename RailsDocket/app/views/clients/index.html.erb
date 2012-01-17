@@ -1,0 +1,47 @@
+<h1>Listing clients</h1>
+
+<table>
+  <tr>
+    <th>Fname</th>
+    <th>Lname</th>
+    <th>Addy1</th>
+    <th>Addy2</th>
+    <th>City</th>
+    <th>Zip</th>
+    <th>State</th>
+    <th>Country</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Engagltr</th>
+    <th>Engagdate</th>
+    <th>Probono</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clients.each do |client| %>
+  <tr>
+    <td><%= client.fname %></td>
+    <td><%= client.lname %></td>
+    <td><%= client.addy1 %></td>
+    <td><%= client.addy2 %></td>
+    <td><%= client.city %></td>
+    <td><%= client.zip %></td>
+    <td><%= client.state %></td>
+    <td><%= client.country %></td>
+    <td><%= client.phone %></td>
+    <td><%= client.email %></td>
+    <td><%= client.engagltr %></td>
+    <td><%= client.engagdate %></td>
+    <td><%= client.probono %></td>
+    <td><%= link_to 'Show', client %></td>
+    <td><%= link_to 'Edit', edit_client_path(client) %></td>
+    <td><%= link_to 'Destroy', client, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Client', new_client_path %>
